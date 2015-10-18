@@ -193,6 +193,3 @@ httpServer = SocketServer.TCPServer(("", 10000), HttpRequestHandler)
 httpServer.serve_forever()
 ```
 
-
-
-##Sample SimpleHTTPServer Program Explained

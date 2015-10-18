@@ -155,3 +155,41 @@ serverSocket.close()
 
 ---
 
+## Module 3: Video 2 Exercises
+
+#### Q1\. Is this server multi-threaded?
+
+```
+No, the SocketServer framework is not multi-threaded.
+In my testing of the sample code, it only handles one client at a time.
+```
+
+
+
+#### Q2\. Code up the multi-threaded version of the SocketServer.
+
+```
+#!/usr/bin/python
+import SocketServer
+import threading
+
+class EchoHandler(SocketServer.BaseRequestHandler):
+  def handle(self):
+    print "Client connected: {0}".format(self.client_address)
+    data = "dummy"
+    while len(data):
+      data = self.request.recv(1024)
+      self.request.send(data)
+    print "Client disconnected: {0}".format(self.client_address)
+
+class ThreadedEchoServer(SocketServer.ThreadingMixIn, SocketServer.TCPServer):
+    pass
+
+serverAddress = ("0.0.0.0", 9000)
+server = ThreadedEchoServer(serverAddress, EchoHandler)
+target=server.serve_forever()
+server.close()
+```
+
+---
+

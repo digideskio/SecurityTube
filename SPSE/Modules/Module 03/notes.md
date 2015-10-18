@@ -167,3 +167,32 @@ server.serve_forever()
 - ```server.handle_request()``` - Serves a single request
 
 
+
+##Creating Web Servers
+
+####About Web Servers
+- Typically listen on port 80 or 443
+- Wait for client HTTP requests (GET, POST, HEAD, etc)
+- Process request by executing scripts or serving files.
+
+####Sample SimpleHTTPServer Program
+
+```
+import SocketServer
+import SimpleHTTPServer
+
+class HttpRequestHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
+  def do_GET(self):
+    if self.path == '/admin':
+      self.wfile.write('This page is only for Admins!\n')
+      self.wfile.write(self.headers)
+    else:
+      SimpleHTTPServer.SimpleHTTPRequestHandler.do_GET(self)
+
+httpServer = SocketServer.TCPServer(("", 10000), HttpRequestHandler)
+httpServer.serve_forever()
+```
+
+
+
+##Sample SimpleHTTPServer Program Explained

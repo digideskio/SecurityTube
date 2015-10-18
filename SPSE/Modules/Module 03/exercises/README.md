@@ -193,3 +193,35 @@ server.close()
 
 ---
 
+## Module 3: Video 3 Exercises
+
+#### Q1\. Is there a module available to run CGI as well?
+
+```
+Yes, the CGIHTTPServer is the module that will run CGI scripts.
+```
+
+
+#### Q2\. Write a PoC for the CGI module.
+
+```
+#!/usr/bin/python
+import SocketServer
+import BaseHTTPServer
+import CGIHTTPServer
+
+class CGIRequestHandler(CGIHTTPServer.CGIHTTPRequestHandler):
+  def do_GET(self):
+    if self.path == '/admin':
+      self.wfile.write('This page is only for Admins!\n')
+      self.wfile.write(self.headers)
+    else:
+      CGIHTTPServer.CGIHTTPRequestHandler.do_GET(self
+
+httpServer = BaseHTTPServer.HTTPServer(("", 10000), CGIRequestHandler)
+httpServer.serve_forever()
+httpServer.close()
+```
+
+---
+

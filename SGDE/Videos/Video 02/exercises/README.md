@@ -13,4 +13,4 @@ GDB, and the files from which symbols were loaded. In addition to this, the
 
 ---
 
-[Back to main](https://github.com/rot0xd/SecurityTube-GNU-Debugger-Expert/blob/master/README.md)
+[Back to main](https://github.com/rot0xd/SecurityTube/blob/master/SGDE/README.md)

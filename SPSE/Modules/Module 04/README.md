@@ -13,4 +13,4 @@
   - Case Studies
   - Lab Exercises
 
-[Back to main](https://github.com/rot0xd/SecurityTube-Python-Scripting-Expert/blob/master/README.md)
+[Back to main](https://github.com/rot0xd/SecurityTube/blob/master/SPSE/README.md)

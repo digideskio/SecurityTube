@@ -7,16 +7,14 @@
 - Traces all syscalls made by a program.
 - Tells us about arguments passed and has great filtering capabilities.
 
+
 #### Useful Flags
 - ```-o``` - Saves output to a file
 - ```-t``` - Display timestamps next to syscalls
 - ```-r``` - Display relative timestamps next to syscalls
 - ```-e``` - Display only the syscalls specified
 - ```-p``` - Attach ```strace``` to a running process.
-- ```-c``` - 
-
-strace -e open,write
-
+- ```-c``` - Displays summary of syscall statistics upon program completion 
 
 
 #### Sample Normal ```strace``` Output

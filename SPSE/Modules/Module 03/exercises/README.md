@@ -225,3 +225,18 @@ httpServer.close()
 
 ---
 
+## Module 3: Video 4 Exercises
+
+#### Q1\. Create a packet sniffer using raw sockets which can parse individual fields of TCP packets.
+
+```
+TODO
+```
+
+
+
+#### Q2\. Create a sniffer which uses a filter to only print details and dump data of an HTTP packet.
+
+```
+TODO
+```

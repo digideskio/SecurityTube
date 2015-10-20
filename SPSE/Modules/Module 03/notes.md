@@ -193,3 +193,49 @@ httpServer = SocketServer.TCPServer(("", 10000), HttpRequestHandler)
 httpServer.serve_forever()
 ```
 
+
+
+##Packet Sniffing with Raw Sockets
+
+####Raw Socket Basics
+- Provide a way for a packet to bypass the network stack
+- Packet is delivered to application directly.
+- Packet contains all headers and data before they are stripped away.
+- We use the PF_PACKET interface.
+
+####PF_PACKET interface
+- Handles packets at layer 2 of the OSI model.
+- Supports filtering using Berkley Packet Filters.
+- All packets complete with all headers and data.
+
+####Raw Sockets Sample Program
+
+```
+import socket
+import struct
+import binascii
+
+# Uncomment for OS X
+# rawSocket = socket.socket(socket.AF_INET, socket.SOCK_RAW, socket.htons(0x0800))
+
+# Uncomment for Linux
+# rawSocket = socket.socket(socket.PF_PACKET, socket.SOCK_RAW, socket.htons(0x0800))
+
+pkt = rawSocket.recvfrom(2048)
+
+ethernetHeader = pkt[0][0:14]
+eth_hdr = struct.unpack("!6s6s2s", ethernetHeader)
+binascii.hexlify(eth_hdr[0])
+binascii.hexlify(eth_hdr[1])
+binascii.hexlify(eth_hdr[2])
+
+ipHeader = pkt[0][14:34]
+ip_hdr = struct.unpack("!12s4s4s", ipHeader)
+
+print "Source IP address: {0}".format(socket.inet_ntoa(ip_hdr[1]))
+print "Destination IP address: {0}".format(socket.inet_ntoa(ip_hdr[2]))
+
+tcpHeader = pkt[0][34:54]
+tcp_hdr = struct.unpack("!HH16s", tcpHeader)
+```
+

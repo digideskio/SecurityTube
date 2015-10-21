@@ -10,7 +10,7 @@
 - [X] [Video 02 - Symbol Files](Videos/Video 02/README.md)
 - [X] [Video 03 - Inspecting Symbols with nm](Videos/Video 03/README.md)
 - [X] [Video 04 - System Call Tracing with strace](Videos/Video 04/README.md)
-- [ ] [Video 05 - Breakpoints, Examining Registers and Memory](Videos/Video 05/README.md)
+- [X] [Video 05 - Breakpoints, Examining Registers and Memory](Videos/Video 05/README.md)
 - [ ] [Video 06 - Modifying Registers and Memory](Videos/Video 06/README.md)
 - [ ] [Video 07 - Convenience Variables and Calling Routines](Videos/Video 07/README.md)
 - [ ] [Video 08 - Cracking a Simple Binary with Debug Symbols](Videos/Video 08/README.md)

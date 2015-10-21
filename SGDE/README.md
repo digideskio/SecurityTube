@@ -14,7 +14,7 @@
 - [X] [Video 06 - Modifying Registers and Memory](Videos/Video 06/README.md)
 - [X] [Video 07 - Convenience Variables and Calling Routines](Videos/Video 07/README.md)
 - [X] [Video 08 - Cracking a Simple Binary with Debug Symbols](Videos/Video 08/README.md)
-- [ ] [Video 09 - Disassembling and Cracking a Simple Binary](Videos/Video 09/README.md)
+- [X] [Video 09 - Disassembling and Cracking a Simple Binary](Videos/Video 09/README.md)
 - [ ] [Video 10 - Conditional Breakpoints using Variables and Registers](Videos/Video 10/README.md)
 - [ ] [Video 11 - Installing Debian ARMEL in QEMU](Videos/Video 11/README.md)
 - [ ] [Video 12 - Cracking a Simple Program on ARM](Videos/Video 12/README.md)

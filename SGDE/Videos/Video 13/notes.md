@@ -7,7 +7,7 @@
 - Checking for jailbreaking is common by developers.
 
 #### Debugging iOS Applications
-- Use ```classdump-z``` to display all objects in an application.
+- Use ```class-dump-z``` to display all objects in an application.
 - ```(gdb) break -[AntiPiracyViewController isJailbroken]``` breaks at the isJailbroken function of the AntiPiracyViewController class.
 
 ---

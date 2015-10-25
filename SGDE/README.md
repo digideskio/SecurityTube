@@ -17,7 +17,7 @@
 - [X] [Video 09 - Disassembling and Cracking a Simple Binary](Videos/Video 09/README.md)
 - [X] [Video 10 - Conditional Breakpoints using Variables and Registers](Videos/Video 10/README.md)
 - [X] [Video 11 - Installing Debian ARMEL in QEMU](Videos/Video 11/README.md)
-- [ ] [Video 12 - Cracking a Simple Program on ARM](Videos/Video 12/README.md)
+- [X] [Video 12 - Cracking a Simple Program on ARM](Videos/Video 12/README.md)
 - [ ] [Video 13 - iPhone Application Cracking with GDB](Videos/Video 13/README.md)
 - [ ] [Video 14 - GDB on 64-Bit Systems](Videos/Video 14/README.md)
 
